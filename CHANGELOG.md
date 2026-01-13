@@ -1,5 +1,17 @@
 # Change log
 
+## v1.5.1 (13/01/2026)
+
+### Bug Fixes
+
+- **Hybrid Sync Implementation**: Switched to a hybrid synchronization method specifically optimized for AMD Ryzen.
+- **Fix Wake Black Screen**: Replaced `TSC_ADJUST` offset manipulation with direct `MSR_TSC` hard-sync. This resolves black screen and system freeze issues upon waking from sleep on AMD platforms while maintaining system smoothness.
+
+### Enhancements
+
+- Retained `MSR_HWCR` frequency locking to ensure continued system smoothness and prevent TSC drift.
+- Improved reliability by enforcing hard sync on every wake cycle.
+
 ## v1.5.0 (21/11/2025)
 
 ### Bug Fixes
