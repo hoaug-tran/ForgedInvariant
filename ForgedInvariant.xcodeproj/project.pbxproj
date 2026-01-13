@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		1C748C2D1C21952C0024EED2 /* Plugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C748C2C1C21952C0024EED2 /* Plugin.cpp */; };
 		40FEDF472BE01162008521DD /* plugin_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40FEDF462BE01162008521DD /* plugin_start.cpp */; };
-		CE8DA0832517C41A008C44E8 /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8DA0822517C41A008C44E8 /* libkmod.a */; };
+		AC9BEDF72F164D61008AD5FE /* kern_util.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AC9BEDF62F164D61008AD5FE /* kern_util.hpp */; };
+		AC9BEDF82F164D61008AD5FE /* kern_devinfo.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AC9BEDF42F164D61008AD5FE /* kern_devinfo.hpp */; };
+		AC9BEDF92F164D61008AD5FE /* kern_patcher.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AC9BEDF52F164D61008AD5FE /* kern_patcher.hpp */; };
+		AC9BEDFA2F164D61008AD5FE /* kern_api.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AC9BEDF32F164D61008AD5FE /* kern_api.hpp */; };
+		ACDD10552F16460A00EBA62A /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8DA0822517C41A008C44E8 /* libkmod.a */; };
 		D579D09E2A629F5300A4BCCE /* TSCSyncer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D579D09C2A629F5300A4BCCE /* TSCSyncer.cpp */; };
 		D579D09F2A629F5300A4BCCE /* TSCSyncer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D579D09D2A629F5300A4BCCE /* TSCSyncer.hpp */; };
 /* End PBXBuildFile section */
@@ -32,6 +36,10 @@
 		1C748C2C1C21952C0024EED2 /* Plugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Plugin.cpp; sourceTree = "<group>"; };
 		1C748C2E1C21952C0024EED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40FEDF462BE01162008521DD /* plugin_start.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = plugin_start.cpp; path = Lilu/Lilu/Library/plugin_start.cpp; sourceTree = "<group>"; };
+		AC9BEDF32F164D61008AD5FE /* kern_api.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = kern_api.hpp; path = Lilu/Lilu/Headers/kern_api.hpp; sourceTree = "<group>"; };
+		AC9BEDF42F164D61008AD5FE /* kern_devinfo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = kern_devinfo.hpp; path = Lilu/Lilu/Headers/kern_devinfo.hpp; sourceTree = "<group>"; };
+		AC9BEDF52F164D61008AD5FE /* kern_patcher.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = kern_patcher.hpp; path = Lilu/Lilu/Headers/kern_patcher.hpp; sourceTree = "<group>"; };
+		AC9BEDF62F164D61008AD5FE /* kern_util.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = kern_util.hpp; path = Lilu/Lilu/Headers/kern_util.hpp; sourceTree = "<group>"; };
 		CE8DA0822517C41A008C44E8 /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libkmod.a; path = MacKernelSDK/Library/x86_64/libkmod.a; sourceTree = SOURCE_ROOT; };
 		D579D09C2A629F5300A4BCCE /* TSCSyncer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TSCSyncer.cpp; sourceTree = "<group>"; };
 		D579D09D2A629F5300A4BCCE /* TSCSyncer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TSCSyncer.hpp; sourceTree = "<group>"; };
@@ -42,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8DA0832517C41A008C44E8 /* libkmod.a in Frameworks */,
+				ACDD10552F16460A00EBA62A /* libkmod.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +90,10 @@
 		40FEDF482BE01171008521DD /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				AC9BEDF32F164D61008AD5FE /* kern_api.hpp */,
+				AC9BEDF42F164D61008AD5FE /* kern_devinfo.hpp */,
+				AC9BEDF52F164D61008AD5FE /* kern_patcher.hpp */,
+				AC9BEDF62F164D61008AD5FE /* kern_util.hpp */,
 				40FEDF462BE01162008521DD /* plugin_start.cpp */,
 			);
 			name = SDK;
@@ -103,6 +115,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D579D09F2A629F5300A4BCCE /* TSCSyncer.hpp in Headers */,
+				AC9BEDF72F164D61008AD5FE /* kern_util.hpp in Headers */,
+				AC9BEDF82F164D61008AD5FE /* kern_devinfo.hpp in Headers */,
+				AC9BEDF92F164D61008AD5FE /* kern_patcher.hpp in Headers */,
+				AC9BEDFA2F164D61008AD5FE /* kern_api.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +340,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				CURRENT_PROJECT_VERSION = 1.5.1;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
 				GCC_ENABLE_KERNEL_DEVELOPMENT = NO;
@@ -345,7 +361,7 @@
 				MODULE_NAME = org.ChefKiss.ForgedInvariant;
 				MODULE_START = "$(PRODUCT_NAME)_kern_start";
 				MODULE_STOP = "$(PRODUCT_NAME)_kern_stop";
-				MODULE_VERSION = 1.5.0;
+				MODULE_VERSION = 1.5.1;
 				OTHER_CFLAGS = (
 					"-mmmx",
 					"-msse",
@@ -379,7 +395,7 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
-				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				CURRENT_PROJECT_VERSION = 1.5.1;
 				DEAD_CODE_STRIPPING = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
@@ -400,7 +416,7 @@
 				MODULE_NAME = org.ChefKiss.ForgedInvariant;
 				MODULE_START = "$(PRODUCT_NAME)_kern_start";
 				MODULE_STOP = "$(PRODUCT_NAME)_kern_stop";
-				MODULE_VERSION = 1.5.0;
+				MODULE_VERSION = 1.5.1;
 				OTHER_CFLAGS = (
 					"-mmmx",
 					"-msse",
@@ -491,7 +507,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				CURRENT_PROJECT_VERSION = 1.5.1;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
 				GCC_ENABLE_KERNEL_DEVELOPMENT = NO;
@@ -512,7 +528,7 @@
 				MODULE_NAME = org.ChefKiss.ForgedInvariant;
 				MODULE_START = "$(PRODUCT_NAME)_kern_start";
 				MODULE_STOP = "$(PRODUCT_NAME)_kern_stop";
-				MODULE_VERSION = 1.5.0;
+				MODULE_VERSION = 1.5.1;
 				OTHER_CFLAGS = (
 					"-mmmx",
 					"-msse",
